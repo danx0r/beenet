@@ -22,8 +22,8 @@ elif input("install training data in developer mode?").lower()[:1] == 'y':
     os.system("pip install -e beenet_data")
 
 if input("install models in user mode?").lower()[:1] == 'y':
-    os.system("pip install git+file:///beenet_models")
+    os.system("pip install git+ssh://hub@eye0.com:/home/hub/beenet/beenet_models#egg=beenet_coco_model")
 
 elif input("install models in developer mode?").lower()[:1] == 'y':
-    os.system("git clone ~/beenet_models")
+    os.system("git clone git+ssh://hub@eye0.com:/home/hub/beenet/beenet_models#egg=beenet_coco_model")
     os.system("pip install -e beenet_models")
