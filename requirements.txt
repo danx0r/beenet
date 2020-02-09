@@ -7,3 +7,4 @@ numpy
 scikit-image
 mrcnn
 tensorflow==1.13.2
+keras
