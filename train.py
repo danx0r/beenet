@@ -1,9 +1,7 @@
 import os
-import open_footwear_images
+import balloon_test_data, base_coco_model
 
-cmd = """
-python balloon.py train --weights coco --dataset %stest_balloons/balloon/
-""" % open_footwear_images.datapath
+cmd = "python balloon.py train --weights %sbase_coco_model.h5 --dataset %strain" % (base_coco_model.datapath(), balloon_test_data.datapath())
 
 print (cmd)
 os.system(cmd)
