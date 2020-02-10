@@ -322,7 +322,8 @@ if __name__ == '__main__':
 
     # Load weights
     print("Loading weights ", weights_path)
-    if True: ### danx0r: pass in coco model # args.weights.lower() == "coco":
+     ### danx0r: pass in coco model # args.weights.lower() == "coco":
+    if args.command == "train":
         # Exclude the last layers because they require a matching
         # number of classes
         model.load_weights(weights_path, by_name=True, exclude=[
