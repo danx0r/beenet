@@ -10,6 +10,7 @@ create  & activate virtualenv (call it venv and put it in the root folder of the
 In bash:
 
     virtualenv venv -p python3
+    source venv/bin/activate
 
 then run:
 
