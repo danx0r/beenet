@@ -18,11 +18,17 @@ if input("install basic python requirements?").lower()[:1] == 'y':
 if input("install gpu requirements?").lower()[:1] == 'y':
     os.system("pip install -r requirements-gpu.txt")
 
-if input("run balloon training test?").lower()[:1] == 'y':
+if input("install test dataset and model?").lower()[:1] == 'y':
     os.chdir("tests")
-    os.system("python train.py")
+    os.system("pip install -r requirements-test.txt")
     os.chdir("..")
 
 if input("run pre-trained balloon detection test?").lower()[:1] == 'y':
     os.chdir("tests")
     os.system("python detect.py")
+    os.chdir("..")
+
+if input("run balloon training test?").lower()[:1] == 'y':
+    os.chdir("tests")
+    os.system("python train.py")
+    os.chdir("..")
