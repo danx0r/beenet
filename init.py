@@ -28,7 +28,7 @@ if input("run pre-trained balloon detection test?").lower()[:1] == 'y':
     os.system("python detect.py")
     os.chdir("..")
 
-if input("run balloon training test?").lower()[:1] == 'y':
+if input("run balloon training test (< 5 minutes with gpu, > 1 hr without)?").lower()[:1] == 'y':
     os.chdir("tests")
     os.system("python train.py")
     os.chdir("..")
