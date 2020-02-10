@@ -3,5 +3,4 @@ scikit_image==0.16.2
 tensorflow==1.13.2
 Keras==2.1.0
 ipython
-imagemagick
 http://hub.eye0.com/hub/base_coco_model-1.0.0-py3-none-any.whl

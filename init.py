@@ -8,11 +8,14 @@ if sys.version[0] != "3":
     print ("Python3 pleez!")
     exit()
 
-print ("installing requirements")
-os.system("pip install -r requirements.txt")
-# os.system("pip install -r requirements2.txt")
+if input("install system requirements (assumes debian-based linux)?").lower()[:1] == 'y':
+    print ("imagemagick used to compare images in training test -- not available on all systems")
+    os.system("sudo apt install imagemagick")
 
-if input("install tensorflow-gpu?").lower()[:1] == 'y':
+if input("install basic python requirements?").lower()[:1] == 'y':
+    os.system("pip install -r requirements.txt")
+
+if input("install gpu requirements?").lower()[:1] == 'y':
     os.system("pip install -r requirements-gpu.txt")
 
 if input("run balloon training test?").lower()[:1] == 'y':
