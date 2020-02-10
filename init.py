@@ -26,7 +26,7 @@ if input("install models?").lower()[:1] == 'y':
     os.system("git clone --single-branch --depth=1 hub@eye0.com:/home/hub/beenet/beenet_models")
     os.system("pip install -e beenet_models")
 
-if input("install test dataset and model?").lower()[:1] == 'y':
+if input("install test dataset and models?").lower()[:1] == 'y':
     os.chdir("tests")
     os.system("pip install -r requirements-test.txt")
     os.chdir("..")
