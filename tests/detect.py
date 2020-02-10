@@ -1,7 +1,7 @@
 import os
 import balloon_test_model
 
-cmd = "python3 balloon.py splash --weights %smask_rcnn_balloon_ep1.h5 --image party.jpg" % balloon_test_model.datapath()
+cmd = "python ../process.py splash --weights %smask_rcnn_balloon_ep1.h5 --image party.jpg" % balloon_test_model.datapath()
 
 print (cmd)
 os.system(cmd)

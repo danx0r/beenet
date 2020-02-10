@@ -3,7 +3,7 @@ import balloon_test_data, base_coco_model
 
 os.system("rm -fr ./logs party_splashed.png")
 
-cmd = "python balloon.py train --weights %sbase_coco_model.h5 --dataset %s" % (base_coco_model.datapath(), balloon_test_data.datapath())
+cmd = "python ../process.py train --weights %sbase_coco_model.h5 --dataset %s" % (base_coco_model.datapath(), balloon_test_data.datapath())
 print (cmd)
 os.system(cmd)
 
@@ -11,7 +11,7 @@ logs = os.listdir("./logs")
 logs.sort()
 weightpath = "./logs/%s/mask_rcnn_balloon_0001.h5" % logs[-1]
 
-cmd = "python3 balloon.py splash --weights %s --image party.jpg" % weightpath
+cmd = "python ../process.py splash --weights %s --image party.jpg" % weightpath
 print (cmd)
 os.system(cmd)
 
