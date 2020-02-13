@@ -31,6 +31,6 @@ if input("\ninstall training data?").lower()[:1] == 'y':
     os.system("pip install -e beenet_data")
 
 if input("\ninstall models?").lower()[:1] == 'y':
-    os.system("git clone --single-branch --depth=1 hub@eye0.com:/home/hub/beenet/beenet_models")
+    os.system("git clone --single-branch --depth=1 hub@datahub.host:/home/hub/beenet/beenet_models")
     os.system("pip install -e beenet_models")
 
