@@ -1,4 +1,0 @@
-http://hub.eye0.com/hub/base_coco_model-1.0.0-py3-none-any.whl
-http://hub.eye0.com/hub/balloon_test_data-1.0.0-py3-none-any.whl
-http://hub.eye0.com/hub/balloon_test_model-1.0.0-py3-none-any.whl
-

@@ -7,10 +7,14 @@ import numpy as np
 import skimage.draw
 from mrcnn.config import Config
 from mrcnn import model as modellib, utils
-import base_coco_model
 
-# Path to trained weights file
-COCO_WEIGHTS_PATH = os.path.join(base_coco_model.datapath(), "mask_rcnn_coco.h5")
+try:
+    import base_coco_model                  #only needed for training from scratch
+
+    # Path to trained weights file
+    COCO_WEIGHTS_PATH = os.path.join(base_coco_model.datapath(), "mask_rcnn_coco.h5")
+except:
+    print ("base_coco_model unavailable")
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
